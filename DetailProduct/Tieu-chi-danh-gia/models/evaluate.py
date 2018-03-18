@@ -1,7 +1,8 @@
-from mongoengine import Document, IntField,StringField
+from mongoengine import *
 
 
 class Evaluate(Document):
+    phone = ReferenceField('Phone')
     design = IntField()
     screen = IntField()
     func = IntField()
