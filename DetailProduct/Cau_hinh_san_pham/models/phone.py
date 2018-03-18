@@ -56,3 +56,4 @@ class Phone(Document):
     music_player = StringField() # Định dạng nhạc
     #10. Thông tin khác
     release_date = StringField() # Thời điểm ra mắt
+    phone_brand_name = StringField() # Hãng sản xuất
