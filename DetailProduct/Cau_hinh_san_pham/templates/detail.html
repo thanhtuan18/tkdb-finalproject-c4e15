@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Personel detail</title>
+  </head>
+  <body>
+    <h1>Personel detail</h1>
+    <b>{{service.name}}</b>
+    <div class="">
+            <img src = {{service.image}}></img>
+    </div>
+    <p>Year of birth: {{service.yob}}</p>
+    <p>Gender: {{ "Female" if service.gender == 0 else "Male" }}</p>
+    <p>Height: {{service.height}} cm</p>
+    <p>Measurements: {{service.measurements}}</p>
+    <p>Phone: {{service.phone}}</p>
+    <p>Adress: {{service.address}}</p>
+    <p>Description: {{service.description}}</p>
+    <p>Status: {{ "Free" if service.status == False else "Busy" }}</p>
+    <a href="{{ url_for('modify', service_id = service.id) }}">Modify</a>
+    <a href="{{ url_for('delete', service_id = service.id) }}">Delete</a>
+    <a href="http://127.0.0.1:5000/service">Go back</a>
+  </body>
+</html>
