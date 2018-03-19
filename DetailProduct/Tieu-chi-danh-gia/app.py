@@ -1,5 +1,6 @@
 from flask import *
 from models.evaluate import Evaluate
+from models.phone import Phone
 import mlab
 
 mlab.connect()
@@ -7,8 +8,8 @@ mlab.connect()
 app = Flask(__name__)
 
 
-@app.route('/danhgiasanpham',methods = ['GET','POST'])
-def evaluate():
+@app.route('/danhgiasanpham/<proid>',methods = ['GET','POST'])
+def evaluate(proid):
     designlist = []
     screenlist = []
     funclist = []
@@ -17,9 +18,11 @@ def evaluate():
     pinlist = []
 
     if request.method == 'GET':
-        return render_template('index.html')
+        phone = Phone.objects.get(id = proid)
+        return render_template('index.html',product = phone)
     elif request.method == 'POST':
         form = request.form
+        phone = Phone.objects.get(id = proid)
         design = int(form['design'])
         screen = int(form['screen'])
         func = int(form['func'])
@@ -28,7 +31,8 @@ def evaluate():
         pin = int(form['pin'])
         comment = form['comment']
 
-        new_eva = Evaluate(design = design,
+        new_eva = Evaluate(phone = phone,
+                           design = design,
                            screen = screen,
                            func = func,
                            exp = exp,
@@ -63,7 +67,7 @@ def evaluate():
 
         average = total / 6
 
-        return render_template("index.html", average = average)
+        return render_template("index.html", average = "{0:.1f}".format(average), product = phone)
 
 if __name__ == '__main__':
   app.run(debug=True)
