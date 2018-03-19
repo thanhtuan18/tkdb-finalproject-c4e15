@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Personel detail</h1>
+    <b>{{service.name}}</b>
+    <div class="">
+            <img src = {{service.image}}></img>
+    </div>
+    <div class="">
+      <p>Year of birth: {{service.yob}}</p>
+      <p>Gender: {{ "Female" if service.gender == 0 else "Male" }}</p>
+      <p>Height: {{service.height}} cm</p>
+      <p>Measurements: {{service.measurements}}</p>
+      <p>Phone: {{service.phone}}</p>
+      <p>Adress: {{service.address}}</p>
+      <p>Description: {{service.description}}</p>
+      <p>Status: {{ "Free" if service.status == False else "Busy" }}</p>
+    </div>
+    <h1>Profile modification</h1>
+    <form method='post'>
+      <label>Name</label> <br>
+      <input type="text" name = "name" value ={{service.name}}><br>
+      <label>Year of birth?</label><br>
+      <input type="text" name = "yob" value = {{service.yob}}><br>
+      <label>Phone number</label><br>
+      <input type="text" name = "phone" value = {{service.phone}}><br>
+      <!-- <label>Measurements</label><br>
+      <input type="text" name = "measurements" value = {{service.measurements}}><br> -->
+      <label>address</label><br>
+      <input type="text" name = "address" value = {{service.adress}}><br>
+      {% if service.gender == 1 %}
+      <input type="radio" name="gender" value="1" checked> Male<br>
+      <input type="radio" name="gender" value="0" > Female<br>
+      {% else %}
+      <input type="radio" name="gender" value="1"> Male<br>
+      <input type="radio" name="gender" value="0" checked> Female<br>
+      {% endif %}
+      <label>Description</label><br>
+      <input type="text" name = "description" value = {{service.description}}><br>
+      <input type="Submit" value="Modify">
+      <input type="reset">
+    </form>
+    <a href="{{ url_for('delete', service_id = service.id) }}">Delete</a>
+    <a href="http://127.0.0.1:5000/service">Go back</a>
+
+  </body>
+</html>

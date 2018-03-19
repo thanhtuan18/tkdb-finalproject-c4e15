@@ -3428,3 +3428,22 @@ Line: 1629, column: 0
 [GPU 8992, Chr
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1521435054844	geckodriver	INFO	geckodriver 0.20.0
+1521435054851	geckodriver	INFO	Listening on 127.0.0.1:53293
+1521435057848	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMIN\\AppData\\Local\\Temp\\rust_mozprofile.JP6YowvfO5X3"
+Unable to read VR Path Registry from C:\Users\ADMIN\AppData\Local\openvr\openvrpaths.vrpath
+1521435060096	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\ADMIN\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ADMIN\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ADMIN\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\ADMIN\AppData\Local\openvr\openvrpaths.vrpath
+1521435063498	Marionette	INFO	Listening on port 53308
+1521435064014	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 10412, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2532, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2532, Chrome_ChildThr[Child 1364, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1364, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/[Child 3616, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3616, Chrome_Chil*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 908, Chrome_
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
