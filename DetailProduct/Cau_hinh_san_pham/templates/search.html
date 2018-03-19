@@ -1,0 +1,45 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mùa đông sun trym</title>
+  </head>
+  <body>
+    {% for service in all_services %}
+      <img src={{service.image}} >
+      <b>{{service.name}}</b>
+      <p>{{service.yob}}</p>
+      <p>{{service.gender}}</p>
+      <p>{{service.height}}</p>
+      <p>{{service.address}}</p>
+    </div>
+    {% endfor %}
+  </body>
+</html>
+=======
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mùa đông sun trym</title>
+  </head>
+  <body>
+    {% for service in all_services %}
+      {% if service.gender == 1 %}
+        <img src="/static/image/male-profile.jpg">
+        <!-- Trong trường hợp web không hiển thị ảnh, check đường dẫn src và loại bỏ "../" -->
+      {% else %}
+        <img src="/static/image/female-profile.jpg" >
+      {% endif %}
+    <div class="">
+      <b>{{service.name}}</b>
+      <p>{{service.yob}}</p>
+      <p>{{service.gender}}</p>
+      <p>{{service.height}}</p>
+      <p>{{service.address}}</p>
+    </div>
+    {% endfor %}
+  </body>
+</html>
+>>>>>>> c66cbb960d8d7951e6cc6f66a65ddca735944685
