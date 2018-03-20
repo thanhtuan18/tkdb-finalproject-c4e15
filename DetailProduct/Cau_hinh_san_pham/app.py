@@ -8,12 +8,24 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    phone_list = Phone.objects()
+    return render_template('index.html', phone_list= phone_list)
+
 
 @app.route('/phone')
 def phone():
     phone = Phone.objects
     return render_template('phone.html', all_phones = phone)
+
+@app.route('/product-detail/<product_name>')
+def detail(product_name):
+    for phone in Phone.objects():
+        if product_name == phone['product_name']:
+            n = 10
+            R = round((255 * (10 - n)) / 10)
+            G = round((255 * n) / 10)
+            B = 0
+            return render_template('product_detail.html', phone = phone, red = R, green = G, blue = B)
 
 # @app.route('/service/update-service/<service_id>', methods=['GET','POST'])
 # def modify(service_id):

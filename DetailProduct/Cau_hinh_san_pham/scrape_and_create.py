@@ -9,12 +9,13 @@ import time
 
 mlab.connect()
 
-link0 = "https://www.thegioididong.com/dtdd-xiaomi"
+link0 = "https://www.thegioididong.com/may-tinh-bang-apple-ipad"
 page0 = urlopen(link0).read()
 soup0 = BeautifulSoup(page0, "html.parser")
 
 samsung = "Samsung"
 iphone = "iPhone (Apple)"
+apple = "Apple"
 oppo = "OPPO"
 sony = "Sony"
 nokia = "Nokia"
