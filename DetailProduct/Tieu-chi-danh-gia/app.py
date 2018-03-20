@@ -42,7 +42,7 @@ def evaluate(proid):
 
         new_eva.save()
 
-        totalEva = Evaluate.objects()
+        totalEva = Evaluate.objects(phone = phone)
         for object in totalEva:
             designlist.append(object['design'])
             screenlist.append(object['screen'])
@@ -63,6 +63,7 @@ def evaluate(proid):
         avgcam = camsum / len(designlist)
         pinsum = sum(pinlist)
         avgpin = pinsum / len(designlist)
+
         total = avgdesign + avgscreen + avgfunc + avgexp + avgcam + avgpin
 
         average = total / 6
