@@ -1,6 +1,7 @@
 from flask import *
 from models.evaluate import Evaluate
 from models.phone import Phone
+from models.average import Average
 import mlab
 
 mlab.connect()
@@ -43,6 +44,8 @@ def evaluate(proid):
         new_eva.save()
 
         totalEva = Evaluate.objects(phone = phone)
+        new_averagePoint = Average.objects.get(phone = phone)
+
         for object in totalEva:
             designlist.append(object['design'])
             screenlist.append(object['screen'])
@@ -67,6 +70,8 @@ def evaluate(proid):
         total = avgdesign + avgscreen + avgfunc + avgexp + avgcam + avgpin
 
         average = total / 6
+
+        new_averagePoint.update(set__averagePoint = average)
 
         return render_template("index.html", average = "{0:.1f}".format(average), product = phone)
 
