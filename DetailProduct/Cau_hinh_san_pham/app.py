@@ -1,6 +1,7 @@
 from flask import *
 import mlab
 from models.phone import Phone
+from models.evaluate import Evaluate
 from random import randint, choice
 mlab.connect()
 
@@ -17,7 +18,7 @@ def phone():
     phone = Phone.objects
     return render_template('phone.html', all_phones = phone)
 
-@app.route('/product-detail/<product_name>')
+@app.route('/product-detail/<product_name>',methods = ['GET', 'POST'])
 def detail(product_name):
     for phone in Phone.objects():
         if product_name == phone['product_name']:
