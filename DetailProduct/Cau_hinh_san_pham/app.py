@@ -23,9 +23,18 @@ def detail(product_name):
     for phone in Phone.objects():
         if product_name == phone['product_name']:
             n = 10
-            R = round((255 * (10 - n)) / 10)
-            G = round((255 * n) / 10)
-            B = 0
+            if 1 <= n < 2:
+                score_color = '#d50000'
+            elif 2 <= n < 4:
+                score_color = '#f00'
+            elif 4 <= n < 6:
+                score_color = '#ffa10d'
+            elif 6 <= n < 8:
+                score_color = '#FC0'
+            elif 8 <= n < 9:
+                score_color = '#aeeb43'
+            elif 9 <= n <= 10:
+                score_color = '#92ce28'
             return render_template('product_detail.html', phone = phone, red = R, green = G, blue = B)
 
 # @app.route('/service/update-service/<service_id>', methods=['GET','POST'])
