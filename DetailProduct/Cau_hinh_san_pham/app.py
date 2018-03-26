@@ -2,6 +2,7 @@ from flask import *
 import mlab
 from models.phone import Phone
 from models.evaluate import Evaluate
+from models.average import Average
 from random import randint, choice
 mlab.connect()
 
@@ -22,11 +23,13 @@ def phone():
 def detail(product_name):
     for phone in Phone.objects():
         if product_name == phone['product_name']:
-            n = 10
-            R = round((255 * (10 - n)) / 10)
-            G = round((255 * n) / 10)
-            B = 0
-            return render_template('product_detail.html', phone = phone, red = R, green = G, blue = B)
+            for evaluated in Average.objects():
+                if evaluated.phone.id == phone.id:
+                    n = round(evaluated['averagePoint'] * 2)
+                    R = round((255 * (10 - n)) / 10)
+                    G = round((255 * n) / 10)
+                    B = 0
+                    return render_template('product_detail.html', phone = phone, red = R, green = G, blue = B, score = n)
 
 # @app.route('/service/update-service/<service_id>', methods=['GET','POST'])
 # def modify(service_id):
