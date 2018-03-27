@@ -46,6 +46,201 @@
           <td>{{phone.battery_capacity}}</td>
         </tr>
       </table>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Chi tiết cấu hình</button>
     </div>
   </div>
 </section>
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Chi tiết cấu hình {{phone.product_name}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="{{phone.product_size_image}}" class="w-100" alt="">
+        <table class="table table-striped">
+          <tr class="table-primary"><td colspan="2" class="font-weight-bold">Màn hình</td></tr>
+          <tr>
+            <td>Công nghệ màn hình</td>
+            <td>{{phone.display_technology}}</td>
+          </tr>
+          <tr>
+            <td>Độ phân giải</td>
+            <td>{{phone.display_resolution}}</td>
+          </tr>
+          <tr>
+            <td>Màn hình rộng</td>
+            <td>{{phone.display_size}}</td>
+          </tr>
+          <tr>
+            <td>Mặt kính cảm ứng</td>
+            <td>{{phone.display_screen}}</td>
+          </tr>
+          <tr class="table-primary"><td colspan="2" class="font-weight-bold">Camera sau</td></tr>
+          <tr>
+            <td>Độ phân giải</td>
+            <td>{{phone.back_cam_re}}</td>
+          </tr>
+          <tr>
+            <td>Quay phim</td>
+            <td>{{phone.back_cam_vid_rercord}}</td>
+          </tr>
+          <tr>
+            <td>Đèn Flask</td>
+            <td>{{phone.back_cam_flash}}</td>
+          </tr>
+          <tr>
+            <td>Chụp ảnh nâng cao</td>
+            <td>{{phone.back_cam_features}}</td>
+          </tr>
+          <tr class="table-primary"><td colspan="2" class="font-weight-bold">Camera trước</td></tr>
+          <tr>
+            <td>Độ phân giải</td>
+            <td>{{phone.front_cam_res}}</td>
+          </tr>
+          <tr>
+            <td>Videocall</td>
+            <td>{{phone.front_cam_vid_call}}</td>
+          </tr>
+          <tr>
+            <td>Thông tin khác</td>
+            <td>{{phone.front_cam_features}}</td>
+          </tr>
+          <tr class="table-primary"><td colspan="2" class="font-weight-bold">Hệ điều hành - CPU</td></tr>
+          <tr>
+            <td>Hệ điều hành</td>
+            <td>{{phone.operating_system}}</td>
+          </tr>
+          <tr>
+            <td>Chipset (Hãng sản xuất CPU)</td>
+            <td>{{phone.chipset}}</td>
+          </tr>
+          <tr>
+            <td>Tốc độ CPU</td>
+            <td>{{phone.chipset_speed}}</td>
+          </tr>
+          <tr>
+            <td>Chip đồ họa (GPU)</td>
+            <td>{{phone.chipset_gpu}}</td>
+          </tr>
+          <tr class="table-primary"><td colspan="2" class="font-weight-bold">Bộ nhớ & Lưu trữ</td></tr>
+          <tr>
+            <td>RAM</td>
+            <td>{{phone.ram}}</td>
+          </tr>
+          <tr>
+            <td>Bộ nhớ trong</td>
+            <td>{{phone.rom}}</td>
+          </tr>
+          <tr>
+            <td>Bộ nhớ còn lại (khả dụng)</td>
+            <td>{{phone.rom_available}}</td>
+          </tr>
+          <tr>
+            <td>Thẻ nhớ ngoài</td>
+            <td>{{phone.external_storage}}</td>
+          </tr>
+          <tr class="table-primary"><td colspan="2" class="font-weight-bold">Kết nối</td></tr>
+          <tr>
+            <td>Mạng di động</td>
+            <td>{{phone.data}}</td>
+          </tr>
+          <tr>
+            <td>SIM</td>
+            <td>{{phone.sim}}</td>
+          </tr>
+          <tr>
+            <td>Wifi</td>
+            <td>{{phone.wifi}}</td>
+          </tr>
+          <tr>
+            <td>GPS</td>
+            <td>{{phone.gps}}</td>
+          </tr>
+          <tr>
+            <td>Bluetooth</td>
+            <td>{{phone.bluetooth}}</td>
+          </tr>
+          <tr>
+            <td>Cổng kết nối/sạc</td>
+            <td>{{phone.port}}</td>
+          </tr>
+          <tr>
+            <td>Jack tai nghe</td>
+            <td>{{phone.headphone_jack}}</td>
+          </tr>
+          <tr>
+            <td>Kết nối khác</td>
+            <td>{{phone.other_connection}}</td>
+          </tr>
+          <tr class="table-primary"><td colspan="2" class="font-weight-bold">Thiết kế & Trọng lượng</td></tr>
+          <tr>
+            <td>Thiết kế</td>
+            <td>{{phone.design}}</td>
+          </tr>
+          <tr>
+            <td>Chất liệu</td>
+            <td>{{phone.material}}</td>
+          </tr>
+          <tr>
+            <td>Kích thước</td>
+            <td>{{phone.phone_dimension}}</td>
+          </tr>
+          <tr>
+            <td>Trọng lượng</td>
+            <td>{{phone.weight}}</td>
+          </tr>
+          <tr class="table-primary"><td colspan="2" class="font-weight-bold">Thông tin pin & Sạc</td></tr>
+          <tr>
+            <td>Dung lượng pin</td>
+            <td>{{phone.battery_capacity}}</td>
+          </tr>
+          <tr>
+            <td>Loại pin</td>
+            <td>{{phone.battery_type}}</td>
+          </tr>
+          <tr>
+            <td>Công nghệ pin</td>
+            <td>{{phone.battery_technology}}</td>
+          </tr>
+          <tr class="table-primary"><td colspan="2" class="font-weight-bold">Tiện ích</td></tr>
+          <tr>
+            <td>Bảo mật nâng cao</td>
+            <td>{{phone.protection}}</td>
+          </tr>
+          <tr>
+            <td>Tính năng đặc biệt</td>
+            <td>{{phone.special_features}}</td>
+          </tr>
+          <tr>
+            <td>Ghi âm</td>
+            <td>{{phone.recording}}</td>
+          </tr>
+          <tr>
+            <td>Radio</td>
+            <td>{{phone.radio}}</td>
+          </tr>
+          <tr>
+            <td>Xem phim</td>
+            <td>{{phone.video_player}}</td>
+          </tr>
+          <tr>
+            <td>Nghe nhạc</td>
+            <td>{{phone.music_player}}</td>
+          </tr>
+          <tr class="table-primary"><td colspan="2" class="font-weight-bold">Thông tin khác</td></tr>
+          <tr>
+            <td>Thời điểm ra mắt</td>
+            <td>{{phone.release_date}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng lại</button>
+      </div>
+    </div>
+  </div>
+</div>
