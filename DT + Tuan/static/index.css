@@ -15,7 +15,7 @@
 }
 
 .text-color {
-  color: rgb(222, 12, 37);
+  color: rgb(0, 0, 0);
 }
 
 .block1 {
@@ -73,15 +73,28 @@
   padding-top: 30px;
 }
 
-.top_evalue {
-  border: 2px solid rgb(22, 92, 198);
-  border-radius: 360px;
-}
+
 
 .av-w {
-  width: 40px;
+  width: 45px;
+  height: 45px;
+  background-color: #28a745;
+  border-radius: .25rem;
+}
+
+.h-45px {
+  height: 45px;
 }
 
 .h-48px {
   height: 48px;
+}
+
+.text-color-green {
+  background-color: rgb(146, 206, 40);
+  border-style: none;
+}
+
+.font-lobster {
+  font-family: 'Lobster', cursive;
 }

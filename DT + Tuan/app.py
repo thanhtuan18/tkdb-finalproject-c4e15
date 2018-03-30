@@ -25,7 +25,6 @@ def index():
             phone_dict["phone"] = Phone.objects.get(id=i.phone)
             phone_dict["averagePoint"] = round(i.averagePoint, 1)
             top4.append(phone_dict)
-            print(top4)
         return render_template('index.html', top4=top4)
 
     elif request.method == "POST":
@@ -60,6 +59,7 @@ def result():
         # phone_li1 = Phone.objects(product_name=regex1)
         # phone_li2 = Phone.objects(product_name=regex2)
         return "a"
+
 
 @app.route('/compare', methods = ["GET", "POST"])
 def compare():
