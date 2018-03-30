@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request, session
 import mlab
 from models.phone import Phone
+from models.evaluate import Evaluate
 from models.average import Average
 import re
 
@@ -60,7 +61,6 @@ def chi_tiet_hang_dien_thoai(brand_name):
     phone_data = []
     for item in phone:
         if item.phone_brand_name == brand_name:
-            name = item.product_name
             phone_data.append(item)
     return render_template('dien-thoai-cua-hang.html',phone = phone_data, brand_name = brand_name)
 

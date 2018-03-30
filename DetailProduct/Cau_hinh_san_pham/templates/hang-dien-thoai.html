@@ -7,9 +7,18 @@
   </head>
   <body>
     {% include "homepage/navigation.html" %}
+    <section class="body-padding-top d-flex flex-row flex-wrap">
     {% for brand_name in brand_name_list %}
-    <li class="pl-2 pb-2"><a href="/hang-dien-thoai/{{brand_name}}">{{brand_name}}</a></li>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{brand_name}}</h5>
+          <p class="card-text"></p>
+          <a href="/hang-dien-thoai/{{brand_name}}" class="btn btn-primary">Xem sản phẩm</a>
+        </div>
+      </div>
     {% endfor %}
+    </section>
     {% include "homepage/footer.html" %}
   </body>
 </html>

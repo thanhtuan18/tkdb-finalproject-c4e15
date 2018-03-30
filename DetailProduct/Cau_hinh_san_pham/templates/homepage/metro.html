@@ -1,22 +1,27 @@
-<div id="teleport" class="h-w-550px text-color">
-  <h1 class="title1">Điện thoại trong TOP</h1>
+<div id="teleport" class="h-w-550px">
+  <h1 class="text-center font-family-roboto">Top điện thoại điểm cao nhất</h1>
   <div class="mt-30px">
     <div class="d-flex justify-content-around">
       {% for sp in top4 %}
-        <div class="card" style="width: 250px;">
-          <img class="card-img-top" src= "{{ sp.phone.product_main_image }}" >
-          <div class="card-body">
-            <h5 class="card-title text-center h-48px"> {{ sp.phone.product_name }} </h5>
-            <div class="d-flex button">
-              <div class="top_evalue av-w text-center mb-1">
-                {{ sp.averagePoint }}
-              </div>
-            </div>
-            <div class="d-flex button">
-              <a href="#" class="btn btn-primary">Đánh giá</a>
+      <div class="card p-3" style="width: 18rem;">
+        <a href="/danhgiasanpham/{{sp.phone.id}}">
+          <div class="container">
+            <img class="card-img-top detail-on-hover" src="{{sp.phone.product_main_image}}" alt="Card image cap">
+            <div class="overlay">
+                <p class="text mt-4 ml-2">{{sp.phone.display_size}}, {{sp.phone.display_resolution}}</p>
+                <p class="text mt-4 ml-2">{{sp.phone.chipset}}</p>
+                <p class="text mt-4 ml-2">{{sp.phone.ram}} RAM</p>
+                <p class="text mt-4 ml-2">{{sp.phone.rom}} ROM</p>
             </div>
           </div>
-        </div>
+        </a>
+          <div class="card-body">
+            <h5 class="card-title font-family-roboto">{{sp.phone.product_name}}</h5>
+            <p class="card-text"></p>
+            <a href="/danhgiasanpham/{{sp.phone.id}}" class="btn btn-primary font-family-roboto">Đánh giá</a>
+            <span class="rounded float-right span-border"><p class=" text-size-24px mt-2 mb-2 ml-3 mr-3">{{ sp.averagePoint }}</p> </span>
+          </div>
+      </div>
       {% endfor %}
     </div>
   </div>

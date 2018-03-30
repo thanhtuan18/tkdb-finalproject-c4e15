@@ -4,7 +4,10 @@
 
 .body-padding-top {
     padding-top: 66px;
-    margin: 30px;
+}
+
+.body-padding-top-80px {
+    padding-top: 80px;
 }
 
 .logo {
@@ -172,18 +175,34 @@
    font-size: 4em;
 }
 
+.text-size-125-percent {
+    font-size: 125%;
+    font-weight: bold;
+}
+
 .text-size-400-percent {
     font-size: 400%;
     font-weight: bold;
 }
 
-.sizing {
+.sizing-130px {
   width: 130px;
   height: 130px;
 }
 
+.sizing-35px {
+  width: 35px;
+  height: 35px;
+}
+
 .border-width-15px {
   border-width: 15px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.border-width-3px {
+  border-width: 3px;
   border-style: solid;
   border-radius: 50%;
 }
@@ -194,4 +213,59 @@
 
 .margin-bottom-0px {
   margin-bottom: 0px;
+}
+
+.margin-30px {
+  margin: 30px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #000000;
+}
+
+.container:hover .overlay {
+  opacity: 0.75;
+}
+
+.text {
+  color: white;
+  font-size: 17px;
+}
+
+.h1-black-center {
+  color: black;
+  align-items: center;
+}
+
+.text-size-24px {
+  font-size: 24px;
+}
+
+.span-border {
+  border-style: solid;
+  border-width: 7px;
+  border-color: #6c757d;
 }
