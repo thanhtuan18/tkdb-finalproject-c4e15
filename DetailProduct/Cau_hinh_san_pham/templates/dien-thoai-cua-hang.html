@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TKDB -  Danh sách điện thoại {{brand_name}}</title>
+    {% include "meta-data.html" %}
+  </head>
+  <body>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    {% include "homepage/navigation.html" %}
+    {% for item in phone %}
+    <a href="/danhgiasanpham/{{item.id}}">{{item.product_name}}</a>
+    {% endfor %}
+    {% include "homepage/footer.html" %}
+  </body>
+</html>

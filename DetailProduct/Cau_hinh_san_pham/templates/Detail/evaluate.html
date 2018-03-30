@@ -1,0 +1,50 @@
+<div class="bg mt-5">
+    <h3 class="text-center font col-white"><i class="fas fa-clipboard-list"></i> Tiêu chí đánh giá</h3>
+
+    <form method="post">
+      <div class="container">
+        <div class="row">
+          <section class="col col-md-4 text-center border-dark col-white">
+            <label class=" font-s-l font mx-auto">Thiết kế
+            <div><i class="fas fa-mobile fa-3x"></i></div></label>
+            {% include "Detail/moredetail/design.html" %}
+          </section>
+
+          <section class="col col-md-4 text-center border-left border-right border-dark  col-white">
+            <label class=" font-s-l font text-center">Màn hình
+            <div><i class="fas fa-mobile-alt fa-3x"></i></div></label>
+            {% include "Detail/moredetail/screen.html" %}
+          </section>
+
+          <section class="col col-md-4 text-center border-dark  col-white">
+            <label class=" font-s-l font">Tính năng
+            <div><i class="fas fa-cogs fa-3x"></i></div></label>
+            {% include "Detail/moredetail/function.html" %}
+          </section>
+
+          <section class="col col-md-4 text-center mt-3  col-white">
+            <label class=" col font-s-l font">Trải nghiệm
+            <div><i class="fas fa-smile fa-3x"></i></div></label>
+            {% include "Detail/moredetail/exp.html" %}
+          </section>
+
+          <section class="col col-md-4 text-center mt-3 border-left border-right border-dark  col-white">
+            <label class=" col font-s-l font">Camera
+            <div><i class="fas fa-camera fa-3x"></i></div></label>
+            {% include "Detail/moredetail/camera.html" %}
+          </section>
+
+          <section class="col col-md-4 text-center mt-3  col-white">
+            <label class=" col font-s-l font">Pin
+            <div><i class="fas fa-battery-three-quarters fa-3x"></i></div></label>
+            {% include "Detail/moredetail/pin.html" %}
+          </section>
+
+            <br>
+            <section class="mx-auto mt-5 mb-3">
+              <button class="btn btn-primary" type="submit">Đánh giá</button>
+            </section>
+        </div>
+      </div>
+    </form>
+</div>

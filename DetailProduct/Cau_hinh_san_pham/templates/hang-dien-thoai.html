@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TKDB -  Các hãng điện thoại</title>
+    {% include "meta-data.html" %}
+  </head>
+  <body>
+    {% include "homepage/navigation.html" %}
+    {% for brand_name in brand_name_list %}
+    <li class="pl-2 pb-2"><a href="/hang-dien-thoai/{{brand_name}}">{{brand_name}}</a></li>
+    {% endfor %}
+    {% include "homepage/footer.html" %}
+  </body>
+</html>
