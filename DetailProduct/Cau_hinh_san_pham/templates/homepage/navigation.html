@@ -48,11 +48,11 @@
                     </a>
             		  <ul class="dropdown-menu multi-level dark-ul-bg" role="menu" aria-labelledby="dropdownMenu">
                       <li class="divider"></li>
-                      <li class="dropdown-submenu text-dark">
+                      <li class="dropdown-submenu">
                         <a class="text-dark" tabindex="-1" href="/hang-dien-thoai">Hãng điện thoại</a>
-                        <ul class="dropdown-menu dark-ul-bg text-dark borderline">
-                          {% for brand_name in brand_name_list %}
-                          <li class="pl-2 pb-2"><a class="text-dark" href="/hang-dien-thoai/{{brand_name}}">{{brand_name}}</a></li>
+                        <ul class="dropdown-menu">
+                          {% for name in brand_name_list %}
+                          <li class="pl-2 pb-2"><a class="text-dark" href="/hang-dien-thoai/{{name}}">{{name}}</a></li>
                           {% endfor %}
                         </ul>
                       </li>
