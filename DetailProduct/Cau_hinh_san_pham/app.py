@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request, session
 import mlab
 from models.phone import Phone
+from models.brand import Brand
 from models.evaluate import Evaluate
 from models.average import Average
 import re
@@ -51,8 +52,9 @@ def index():
 
 @app.route('/hang-dien-thoai')
 def cac_hang_dien_thoai():
+    brand = Brand.objects()
     brand_name_list = brandname()
-    return render_template('hang-dien-thoai.html', brand_name_list = brand_name_list)
+    return render_template('hang-dien-thoai.html', brand_name_list = brand_name_list, brand = brand)
 
 @app.route('/hang-dien-thoai/<brand_name>')
 def chi_tiet_hang_dien_thoai(brand_name):

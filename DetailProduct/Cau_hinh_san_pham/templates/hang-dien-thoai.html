@@ -10,7 +10,11 @@
     <section class="body-padding-top d-flex flex-row flex-wrap">
     {% for brand_name in brand_name_list %}
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        {% for item in brand %}
+          {% if item.brand_name == brand_name %}
+        <div style = ''><img class="card-img-top" src="{{item.logo}}" alt="Card image cap" style =''></div>        
+          {% endif %}
+        {% endfor %}
         <div class="card-body">
           <h5 class="card-title">{{brand_name}}</h5>
           <p class="card-text"></p>
