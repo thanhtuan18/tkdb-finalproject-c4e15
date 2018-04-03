@@ -269,3 +269,17 @@
   border-width: 7px;
   border-color: #6c757d;
 }
+
+#brand_logo {
+    display: block;
+    position: relative;
+    margin: auto;
+    width:  150px;
+    height: auto;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+  }
+
+#brand_logo_div {
+  height: 150px;
+}

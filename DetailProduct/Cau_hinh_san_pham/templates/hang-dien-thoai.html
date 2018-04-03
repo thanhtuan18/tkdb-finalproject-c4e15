@@ -12,7 +12,7 @@
       <div class="card" style="width: 18rem;">
         {% for item in brand %}
           {% if item.brand_name == brand_name %}
-        <div style = ''><img class="card-img-top" src="{{item.logo}}" alt="Card image cap" style =''></div>        
+        <div id = "brand_logo_div" style = ''><img id = "brand_logo" class="card-img-top" src="{{item.logo}}" alt="Card image cap" style =''></div>
           {% endif %}
         {% endfor %}
         <div class="card-body">

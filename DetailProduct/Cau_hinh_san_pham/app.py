@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request, session
 import mlab
+from forms.forms import ProductSearchForm
 from models.phone import Phone
 from models.brand import Brand
 from models.evaluate import Evaluate
